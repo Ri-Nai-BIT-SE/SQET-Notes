@@ -47,6 +47,16 @@ function getCleanTitle(name: string): string {
 }
 
 /**
+ * 获取缩写标题（用于导航栏），去掉 "-" 后面的部分
+ * (例如："第一部分-基础概念与原理" -> "第一部分")
+ */
+function getShortTitle(name: string): string {
+  const cleanTitle = getCleanTitle(name)
+  const dashIndex = cleanTitle.indexOf('-')
+  return dashIndex > 0 ? cleanTitle.substring(0, dashIndex) : cleanTitle
+}
+
+/**
  * 将常见中文数字字符串转换为阿拉伯数字
  */
 function chineseToArabic(str: string): number {
@@ -184,9 +194,9 @@ export function generateNavAndSidebar(docsDir: string) {
       const topLevelDirPath = path.join(rootDocsPath, dir)
       const link = `/${dir}/`
 
-      // 创建导航项
+      // 创建导航项（使用缩写版本）
       nav.push({
-        text: getCleanTitle(dir),
+        text: getShortTitle(dir),
         link: link,
       })
 
