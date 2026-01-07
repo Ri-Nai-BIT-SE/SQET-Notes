@@ -178,24 +178,61 @@ export function generateNavAndSidebar(docsDir: string) {
     })
     .sort(customSort)
 
-  for (const dir of topLevelDirs) {
-    const topLevelDirPath = path.join(rootDocsPath, dir)
-    const link = `/${dir}/`
+  // 如果存在子目录，按原来的逻辑处理
+  if (topLevelDirs.length > 0) {
+    for (const dir of topLevelDirs) {
+      const topLevelDirPath = path.join(rootDocsPath, dir)
+      const link = `/${dir}/`
 
-    // 创建导航项
-    nav.push({
-      text: getCleanTitle(dir),
-      link: link,
-    })
+      // 创建导航项
+      nav.push({
+        text: getCleanTitle(dir),
+        link: link,
+      })
 
-    // 创建侧边栏
-    // 这是关键的修正：将生成的 items 数组包装在顶层对象中
-    sidebar[link] = [
-      {
-        text: getCleanTitle(dir), // 侧边栏分组的大标题
-        items: createSidebarItems(rootDocsPath, topLevelDirPath),
-      },
-    ]
+      // 创建侧边栏
+      // 这是关键的修正：将生成的 items 数组包装在顶层对象中
+      sidebar[link] = [
+        {
+          text: getCleanTitle(dir), // 侧边栏分组的大标题
+          items: createSidebarItems(rootDocsPath, topLevelDirPath),
+        },
+      ]
+    }
+  } else {
+    // 如果没有子目录，处理 docs 根目录下的文件
+    const rootFiles = fs
+      .readdirSync(rootDocsPath)
+      .filter(entry => {
+        const fullPath = path.join(rootDocsPath, entry)
+        const lowerEntry = entry.toLowerCase()
+        // 排除 index.md、隐藏文件和目录
+        return (
+          isMarkdownFile(fullPath) &&
+          !entry.startsWith('.') &&
+          lowerEntry !== 'index.md' &&
+          lowerEntry !== 'readme.md'
+        )
+      })
+      .sort(customSort)
+
+    // 为根路径创建 sidebar
+    if (rootFiles.length > 0) {
+      const rootItems: SidebarItem[] = rootFiles.map(entry => {
+        const fullPath = path.join(rootDocsPath, entry)
+        const relativePath = `/${path.relative(rootDocsPath, fullPath).replace(/\\/g, '/')}`
+        return {
+          text: getCleanTitle(entry),
+          link: relativePath,
+        }
+      })
+
+      // 为根路径 '/' 配置 sidebar
+      sidebar['/'] = rootItems
+
+      // 可选：为每个文件创建 nav 项（如果需要的话）
+      // 这里暂时不创建 nav，因为通常首页已经足够了
+    }
   }
 
   return { nav, sidebar }

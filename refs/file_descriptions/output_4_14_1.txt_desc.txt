@@ -1,0 +1,20 @@
+Loaded cached credentials.
+This document is a transcript of a university lecture on black-box software testing methodologies. The lecturer explains several key techniques for designing test cases based on software specifications written in natural language, without knowledge of the internal code structure.
+
+### Key Concepts Covered:
+
+*   **Recap of Equivalence Class Partitioning:** The lecture begins by reviewing the concept of dividing input data into equivalence classes, from which test cases are selected. This is framed as a fundamental black-box technique.
+*   **Boundary Value Analysis (BVA):** This is presented as a crucial and powerful extension of equivalence partitioning. The core idea is that errors are most likely to occur at the boundaries of input domains. The methodology involves testing values at the minimum, just above the minimum, a nominal value, just below the maximum, and the maximum for each input variable.
+*   **Advanced BVA Techniques:**
+    *   **Robustness Testing:** Extends BVA by also testing values just outside the valid boundaries (e.g., `min-1` and `max+1`) to check the system's error handling.
+    *   **Worst-Case Testing:** Tests all combinations of boundary values for multiple input variables, based on the assumption that failures can be caused by multiple simultaneous faults.
+    *   **Robust Worst-Case Testing:** A comprehensive combination of the above two, creating a Cartesian product of all robustness test points for all variables.
+*   **Error Guessing:** An experience-based method where the tester uses their intuition, knowledge of common programming errors, and past project data to "guess" where defects are likely to exist. It is often used in conjunction with more formal methods.
+*   **Decision Table Testing:** A systematic approach for modeling complex business rules and logical conditions. It involves creating a table that maps all possible combinations of conditions (e.g., a customer's membership level, purchase amount) to the actions the system should perform (e.g., apply a specific discount). Each column in the table represents a rule that can be converted into a test case.
+*   **Cause-Effect Graphing:** Introduced as a method to handle complex combinations of input conditions. It visually maps the logical relationships between inputs ("causes") and outputs ("effects") and is then converted into a decision table to derive test cases.
+
+### Main Themes & Examples:
+
+*   **From Natural Language to Formal Tests:** A central theme is the process of translating ambiguous, natural-language program descriptions into precise, structured, and effective test cases.
+*   **The Triangle Problem:** The classic problem of identifying a triangle type based on three side lengths is used as a recurring example to illustrate how to apply equivalence partitioning, boundary value analysis, and decision tables.
+*   **Examination & Practical Application:** The lecturer frequently relates the material to exam questions, explaining how testing problems have evolved from subjective design tasks to more objective, fill-in-the-blank formats. The goal is to encourage a deep understanding of the principles, which are essential for both exams and professional practice.

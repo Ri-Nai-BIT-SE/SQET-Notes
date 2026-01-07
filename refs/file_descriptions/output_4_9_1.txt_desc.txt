@@ -1,0 +1,59 @@
+Loaded cached credentials.
+The provided document, `output_4_9_1.txt`, is a detailed transcript of a lecture given by "邵老师" (Professor Shao) for a course titled "Software Quality and Knowledge." The lecture serves as an introduction to the course, covering its objectives, structure, assessment methods, and logistical information.
+
+Here's a detailed summary:
+
+**1. Introduction to the Course and Professor Shao:**
+*   Professor Shao welcomes students to the course, stating it will cover "Software Quality and Knowledge."
+*   She introduces herself, mentioning her academic background (computer science and cybersecurity, able to supervise master's students in both fields), office location, and contact information (email, phone/WeChat). She encourages students seeking graduate supervision to contact her.
+*   She highlights her TAs, Luo Kun (a former software engineering undergraduate student of hers, now a computer science graduate student) and Luo Qixuan (a Malaysian Chinese international master's student with industry experience in software testing and strong bilingual skills), who will assist with grading and course support.
+
+**2. Core Concepts and Motivation for the Course:**
+*   Professor Shao uses an engaging analogy of designing a "three-board swing" for her child to illustrate common pitfalls in software development. This analogy demonstrates how miscommunication and differing interpretations at various stages (customer requirement, programmer, system analyst, business/sales, IT support) can lead to defects and a product that deviates significantly from the original customer's vision.
+*   She emphasizes that the course aims to teach students how to develop software that precisely meets user expectations and to minimize the introduction of defects throughout the software development lifecycle (requirements analysis, system design, coding, deployment, support).
+*   The course aims to equip students with the "technical foundations of a software testing engineer," including fundamental theories and the ability to perform general software testing tasks. For some, it may also lead to the ability to manage testing projects and design complex test cases.
+
+**3. Course Logistics and Structure:**
+*   **Schedule**: The course runs for 8 weeks (weeks 9-16) with 4 class hours per week (Mondays and Wednesdays). It is a 2-credit course with 32 total class hours.
+*   **Prerequisites**: Programming Fundamentals, Object-Oriented Programming, and Software Engineering Fundamentals are listed as necessary prior knowledge.
+*   **Teaching Method**: The course employs a "project-driven" teaching approach, where students are given assignments early and are expected to engage in self-study and problem-solving. Lectures will introduce concepts, but students must actively seek out resources. All classes will be held in room F605.
+*   **Online Resources**:
+    *   **联合课堂 (United Classroom)**: Provides live streaming and recordings of lectures, allowing students to participate remotely for attendance credit.
+    *   **乐学 (Learning Platform)**: The primary platform for announcements, course materials (including extensive supplementary resources like MOOCs from other professors, national standards, and quality system documents), assignment submissions, and a course Q&A forum.
+    *   **爱贝里 (Aibeli)**: A messaging platform for quick communication, direct messages to the professor, and potentially group chats for course-related discussions.
+*   **Teaching Calendar**: A visual calendar (with green for lectures, blue for experiments/discussions, and yellow for mixed sessions including student sharing) outlines the flow of the course. The December 8th session is highlighted as potentially shifting from an experimental session to a lecture based on teaching progress.
+
+**4. Grading Scheme (Process-Oriented Assessment):**
+*   The course uses a "process-oriented assessment" model, emphasizing continuous effort over a single final exam.
+*   **Total Score Base**: 110 points (with a final cap of 100 in the system). This allows for students to achieve 100% even if they don't perform perfectly on the final exam.
+*   **Components**:
+    *   **Regular Performance (5%)**: Based on attendance (random check-ins via Aibeli with location verification), in-class exercises, and active participation.
+    *   **Course Experiments (35%)**: Three main experiments:
+        *   **Experiment 1: Unit Test Practice (Individual, 10%)**: Involves testing given C programs. Students are assigned specific problems (from a pool of 28 C problems for 60+ students, mostly 2 students per problem) and must submit a detailed report using a provided template by December 26th. The work requires understanding C code and applying black-box and white-box testing principles.
+        *   **Experiment 2: Project Test Practice (Team-based, 20%)**: This is the "complex engineering system" required for engineering certification.
+            *   **Team Formation (1% of the 20%)**: Students must form 11 teams (max 6 members each) within the 60+ student cohort by January 12th (13:20). Specific rules for team formation are outlined in "Experiment Zero" and a scoring rubric (Attachment 4). This point is strictly awarded; any non-compliance results in 0.
+            *   **Project Selection**: Teams must confirm their project with Professor Shao by January 17th. Projects can be student-initiated or professor-provided (e.g., related to AI/large models).
+            *   **Deliverables (8%)**: Includes various test documentation (test plan, mid-term report, etc.).
+            *   **Defense (4%)**: Teams will present their project results on December 31st.
+            *   **Teamwork (5%)**: Awarded by the team leader, who has the authority to distribute these points based on individual contributions. Leaders are encouraged to differentiate scores (e.g., 0.5 point increments) and ensure the sum is correct, emphasizing fair evaluation rather than "being nice." This score is integrated into the base 100 points, not additional.
+            *   **Intellectual Property**: Students must submit originality and usage rights statements.
+        *   **Experiment 3: Test Tool Usage (Individual/Combined, 5%)**: Students are encouraged to use testing tools in conjunction with Experiment 1 or 2 (e.g., unit testing frameworks, defect management tools, performance/security testing tools). A report on tool usage is due by December 26th, with some students selected to present their findings.
+    *   **Final Exam (60%)**: A comprehensive exam covering theoretical concepts and practical knowledge from lectures. It will be scheduled by the academic affairs office (not the professor) and may have A/B versions.
+    *   **Additional Points (Max 10%)**: These are separate from the base 100 points and can help students reach 100% if their primary scores are slightly lower. They are awarded for active classroom participation, sharing activities, and constructive suggestions for course improvement.
+
+**5. Textbooks and Reference Materials:**
+*   **Required**: "Software Testing" by Feng Yunzhan, 3rd Edition (2022).
+*   **Recommended**:
+    *   "Software Testing Methods and Technologies" by Zhu Shaoming, 4th Edition (2022), with a corresponding MOOC on Bilibili.
+    *   "Software Testing Experiment Textbook" (focus on testing processes and management).
+    *   Newer books on HarmonyOS testing (2024) and AI/large model testing (2025) for specific project types.
+    *   Older English reference books.
+    *   "Software Tester Certification Tutorial" (2021), useful for basic theory, as it covers the foundational knowledge for a mid-level professional certification.
+*   **Resource Sharing**: Professor Shao offers to provide PDFs of many reference books (including the second edition of Feng Yunzhan's book, third edition of Zhu Shaoming's book, and all foreign language references) for *internal course use only*. Students must sign a copyright agreement to access these.
+
+**6. Academic Integrity and Interaction:**
+*   Emphasizes academic honesty, proper citation of sources, and acknowledging help received.
+*   A course representative will be selected (first student to private message the professor).
+*   Encourages punctuality, independent work, and continuous improvement.
+
+In essence, the lecture sets a clear expectation for a demanding but rewarding course that combines theoretical knowledge with practical, project-based learning, heavily relying on student proactivity and teamwork, with a strong emphasis on continuous assessment.

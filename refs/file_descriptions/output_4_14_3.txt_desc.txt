@@ -1,0 +1,29 @@
+Loaded cached credentials.
+This file is a transcript of a university lecture on software testing. The content covers administrative announcements and two major technical topics: the cause-effect graphing method for black-box testing and an introduction to white-box testing.
+
+### Key Points from the Lecture:
+
+**1. Administrative Announcements**
+*   **Final Exam:** The final exam is scheduled for January 7th. It will be a Chinese-language paper worth 60 points. The instructor outlines the timeline for submitting and retrieving the exam papers around the end of December and the beginning of January.
+*   **Group Project Meeting:** The 11 group leaders are asked to meet with the instructor during the break to confirm requirements for a project, as it affects the drawing for the next semester's defense.
+
+**2. Black-Box Testing: Cause-Effect Graphing Method (因果图法)**
+*   **Core Idea:** This method is a systematic way to design test cases for complex business logic where combinations of inputs (causes) produce different outcomes (effects). It helps translate natural language specifications into formal test cases.
+*   **Process:**
+    1.  **Analyze Specifications:** Identify all the causes (input conditions) and effects (outputs or system changes) from the requirements.
+    2.  **Draw the Graph:** Create a graph that links causes to effects. The graph uses specific symbols to represent logical relationships like AND, OR, and NOT.
+    3.  **Define Constraints:** The graph also shows constraints between causes or between effects, such as "mutually exclusive" (only one can be true) or "requires" (one requires another).
+    4.  **Create a Decision Table:** The completed cause-effect graph is converted into a decision table. This table systematically lists all possible combinations of causes and their corresponding effects.
+    5.  **Generate Test Cases:** Each column in the simplified decision table represents a unique and valid test case.
+*   **Examples Discussed:**
+    *   **Salary Deduction System:** A system that calculates salary deductions based on employee type (salaried/non-salaried) and the severity of a mistake.
+    *   **Vending Machine:** A machine that dispenses a drink and provides change based on the amount of money inserted and the button pressed. This example introduces the concept of **intermediate states** (e.g., "coin inserted").
+
+**3. White-Box Testing**
+*   **Introduction:** The lecture transitions from black-box to white-box testing, which focuses on the internal structure of the software.
+*   **Definition:** White-box testing uses knowledge of the internal code, algorithms, and program flow to design tests. It's not limited to source code; flowcharts or algorithm descriptions are also sufficient to enable white-box techniques.
+*   **Purpose:** It is necessary because black-box testing can miss certain bugs, such as when a program produces the correct output through faulty logic (e.g., two errors cancelling each other out). It helps verify internal paths and data structures.
+*   **Unit Testing Environment:** A key part of white-box testing is unit testing. Since modules are not standalone programs, a special environment is required to test them in isolation. This environment consists of:
+    *   **Driver (驱动模块):** A "main" program developed to call the module under test and pass it test data.
+    *   **Stub (桩模块):** A dummy program that simulates modules called *by* the module under test.
+*   The instructor emphasizes that understanding the difference between drivers and stubs is a common exam topic. The goal is to verify the logic and functionality of each individual unit before integrating it into the larger system.

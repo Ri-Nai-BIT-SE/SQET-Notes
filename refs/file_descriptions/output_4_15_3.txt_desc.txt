@@ -1,0 +1,26 @@
+Loaded cached credentials.
+This file is a transcription of a university lecture on software quality and testing. The lecture covers several key topics:
+
+1.  **White-Box Testing Recap**: The lecture begins by reviewing previous topics, including logical coverage criteria (statement, decision, condition coverage) and the importance of using control flow graphs for analysis.
+
+2.  **Basic Path Testing**: This is the main technical focus. It is presented as a crucial and frequently examined topic. The key concepts discussed are:
+    *   **Objective**: To reduce the infinite number of possible test paths to a manageable, fundamental set.
+    *   **Independent Paths**: A path that introduces at least one new edge not covered by other independent paths.
+    *   **Cyclomatic Complexity (VG)**: A quantitative measure of the logical complexity of a program. The lecture emphasizes that the value of VG directly determines the number of independent paths needed for a complete basis set.
+    *   **Methodology**: The prescribed four-step process is:
+        1.  Draw the program's control flow graph from its source code.
+        2.  Calculate the cyclomatic complexity (VG).
+        3.  Identify the set of basic independent paths.
+        4.  Design test cases to execute each path in the basis set.
+
+3.  **Other Testing Types**: The lecture provides an overview of various applied testing techniques, including:
+    *   **Compatibility Testing**: Ensuring the software works across different hardware, operating systems, browsers, and databases.
+    *   **Usability Testing**: Assessing how easy the software is to understand, learn, and use. It cautions against making this purely subjective.
+    *   **Reliability Testing**: Measuring the software's ability to perform its function under given conditions for a specified period.
+    *   **Documentation Testing**: Verifying the accuracy and clarity of user manuals, help files, and other associated documents.
+    *   **Load and Stress Testing**: A major topic, often tested with analysis questions. It involves testing system performance under high concurrency and finding the system's breaking point.
+
+4.  **Course and Project Administration**: A significant portion of the lecture is dedicated to logistical matters, including:
+    *   Detailed instructions for the final project presentation and defense (`答辩`), covering timing, grading, peer review, and individual questioning.
+    *   Guidance on the final project report, explaining how students can earn extra credit by implementing and documenting tests beyond the basic requirements, such as compatibility or performance testing.
+    *   Announcements about signing up for student-led presentations on testing tools.

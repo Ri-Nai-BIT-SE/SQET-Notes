@@ -1,0 +1,45 @@
+Loaded cached credentials.
+This file is a transcript of a software quality and testing class. The session includes student presentations on testing tools, followed by the teacher's feedback, administrative announcements, and a review for the final exam.
+
+### Student Presentations:
+
+1.  **First Student on CUnit:**
+    *   **Topic:** CUnit, a lightweight unit testing framework for the C language.
+    *   **Key Points:**
+        *   CUnit is a member of the xUnit family, supporting platforms like Linux, Windows, and macOS.
+        *   Its core function is to provide assertions, manage test suites, and generate reports.
+        *   The student explained the architecture (Registry -> Test Suite -> Test Cases) and the steps to write a test: write a test function, initialize the registry, add suites/cases, run tests, and clean up.
+        *   **Practical Example:** The student refactored a decimal-to-binary conversion program to make it testable and then designed test cases, demonstrating how to use assertions.
+        *   **Pros:** Lightweight, easy to integrate, fast compilation, and supports various assertion types.
+        *   **Cons:** Tedious configuration (especially on Windows), requires manual registration of tests (lacks automation), and has no built-in mocking support.
+
+2.  **Second Student on Web Frontend Static Analysis:**
+    *   **Topic:** White-box testing tools for a web game's frontend, focusing on static analysis of JavaScript, CSS, and HTML.
+    *   **Tools Discussed:**
+        *   **JavaScript:** `ESLint` (for code style and preventing errors) and `SonarLint` (for code quality and maintainability). The student found issues like variable name repetition and high cyclomatic complexity.
+        *   **CSS:** `stylelint` (for finding errors and unifying style) and `cssstats` (for statistical analysis and performance evaluation). Issues found included improper font-family definitions and syntax errors, many of which were auto-fixed.
+        *   **HTML:** `HTMLHint` (lightweight syntax checker) and `html-validator` (strict standards validation). Problems included unclosed tags and illegal element nesting (e.g., a paragraph inside a button).
+    *   **Process:** The student explained the setup process involving Node.js and configuration files. They emphasized analyzing the reports, using auto-fix features, and then manually addressing the remaining significant issues.
+
+3.  **Third Student on GTest:**
+    *   **Topic:** GTest, Google's C++ unit testing framework.
+    *   **Key Points:**
+        *   **Features:** Powerful assertion library (`EXPECT_` vs. `ASSERT_`), automatic test discovery, and structured support for test fixtures.
+        *   **C/C++ Interoperability:** Explained how to use `extern "C"` to prevent C++ name mangling when testing C code.
+        *   **Fixtures:** Described using `TEST_F` for stateful tests that require a shared setup and teardown, ensuring test isolation while reducing code duplication.
+        *   **Death Tests:** Introduced the concept of "death tests" (`EXPECT_DEATH`) to verify that code crashes or exits as expected, which is a safe way to test for fatal errors like segmentation faults.
+        *   **Practical Example:** The student found an array overflow bug in a program and used GTest to create a specific test case that triggered the crash, then used GTest's regression testing capabilities to verify the fix.
+
+### Teacher's Lecture and Class Management:
+
+*   **Feedback:** The teacher provided feedback to the presenting students, encouraging them to be more confident and to structure their presentations by first introducing the tool's purpose (e.g., open-source vs. commercial, type of tool) before diving into details.
+*   **In-class Quiz:** The teacher administered a short, 3-question multiple-choice quiz covering course concepts.
+*   **Final Exam Review:**
+    *   **Format:** The exam will consist of 10 judgment questions (5 points), 22 multiple-choice questions (22 points), 2 design questions (20 points, one for black-box and one for white-box testing), and 2 case study questions (13 points).
+    *   **Key Topics:**
+        *   **Fundamentals:** Basic concepts like software quality, defects, testing principles, and the 3D software testing space.
+        *   **Test Management:** Test planning, test cases, and project management.
+        *   **Testing Techniques:** Heavy emphasis on **black-box** and **white-box** testing (10 points each).
+        *   **Application Testing:** Performance, compatibility, usability, reliability, and localization testing are important and may appear in case studies or multiple-choice questions.
+        *   **Test Automation:** The role and limitations of test automation tools. The final multiple-choice question will be on testing tools.
+*   **Assignments:** Reminded students about upcoming deadlines for submitting group PPTs and peer evaluations. Also mentioned an optional feedback survey for extra credit.

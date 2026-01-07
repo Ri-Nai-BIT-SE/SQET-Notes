@@ -1,0 +1,79 @@
+Loaded cached credentials.
+This document is a transcript of a series of student presentations for a software testing course. Multiple groups present their testing processes and findings for software projects they developed, followed by a Q&A session with an instructor.
+
+Here is a detailed summary of each group's presentation:
+
+### Group 1: 8th Group (Puzzle Game)
+*   **Project**: A puzzle game for Windows 10/11 developed in the Unity engine, featuring both a story mode and a standard puzzle mode.
+*   **Testing Methodology**:
+    *   Employed a strict separation of black-box (116 cases) and white-box (50 cases) testing.
+    *   Used the **Unity Test Framework** for automated testing, achieving 90% line coverage on core scripts.
+    *   Performance was tested using the **Unity Profiler**.
+    *   Defects were tracked and prioritized according to national standards, with a 90% fix rate for initial bugs.
+*   **Key Findings**: Most functional and usability defects were resolved, with only two minor ones remaining. A notable bug found was an animation glitch caused by rapid button presses.
+*   **Q&A Highlights**: The group justified their choice of the Unity Test Framework as the official and most suitable tool for testing interconnected game components. They explained that their test cases were designed based on requirement documents, using techniques like equivalence class partitioning.
+
+### Group 2: 3rd Group (Puzzle Game)
+*   **Project**: Another puzzle game project.
+*   **Testing Methodology**:
+    *   Set clear entry (features to be tested) and exit (quality gates) criteria. The exit criteria included a 95% defect fix rate and 100% pass rate for core automated tests.
+    *   Conducted static testing (code and document review) and dynamic testing (functional, performance, usability).
+    *   Used a profiler to monitor performance metrics like frame rate and memory usage.
+*   **Key Findings**: Discovered a requirement inconsistency where the documentation specified complex shape cutting, but the application only implemented rectangular cutting.
+*   **Q&A Highlights**: Team members discussed using specific tools for front-end component testing and performance analysis by observing metrics like frame rate and memory leaks.
+
+### Group 3: 5th Group (Puzzle Game)
+*   **Project**: A puzzle game, with a focus on a "triangle puzzle" feature.
+*   **Testing Methodology**:
+    *   Used a multi-faceted approach: static analysis, documentation review, functional testing, usability testing, and performance testing.
+    *   Utilized **Jira** for bug lifecycle management, prioritizing defects based on severity and difficulty.
+    *   Wrote custom scripts to automate tasks like batch user creation and test data generation.
+*   **Key Findings**: The core game was stable, but a high-priority algorithmic issue was found in the "triangle puzzle" module. Performance testing revealed high CPU usage. All high-priority defects were fixed and verified through regression testing.
+*   **Q&A Highlights**: The group detailed their bug management process in Jira and explained how they used techniques like boundary value analysis to design test cases (e.g., testing username length limits).
+
+### Group 4: "404 not found" Group (Puzzle Game)
+*   **Project**: A puzzle game featuring AI-powered (text-to-image) puzzle creation and a remote leaderboard.
+*   **Testing Methodology**:
+    *   Testing was divided into three phases: unit testing, integration testing (for the new AI and leaderboard modules), and full system testing.
+    *   Covered functional, documentation, usability, performance, reliability, compatibility, and security testing.
+*   **Key Findings**:
+    *   **Reliability**: A high-risk defect was found during stress testing where puzzle pieces could "fly out" of the board.
+    *   **Performance**: Analysis suggested potential for response delays in extreme scenarios.
+    *   **Functional**: A bug was found where the game could not be immediately interrupted in certain modes.
+*   **Q&A Highlights**: The group explained their 5-level defect priority system, from "Fatal" (e.g., crash on launch) to "Suggestion."
+
+### Group 5: "North-South Overpass" Group (Android Puzzle Game)
+*   **Project**: "Puzzle Master," an Android-based puzzle game.
+*   **Testing Methodology**:
+    *   Used **`adb monkey`** for automated stress testing. They leveraged its seed mechanism to reliably reproduce random crashes.
+    *   Focused on real-world mobile challenges like lifecycle management (app freezing when sent to background) and screen compatibility (layout breaking on tablets).
+*   **Key Findings**:
+    *   Identified and fixed a state-saving issue that caused the game to freeze.
+    *   Found that very large images (~4K resolution) could cause memory overflows and crash the app on low-end devices.
+    *   Improved layout compatibility but did not achieve a perfect fix for all screen sizes.
+*   **Q&A Highlights**: The presenter reflected that they should have learned and used a UI automation framework like **Appium** from the start to improve efficiency.
+
+### Group 6: "Accountant" Group (Smart Medical System)
+*   **Project**: A Smart Medical Management System.
+*   **Testing Methodology**:
+    *   A comprehensive testing suite including static analysis (`cppcheck`), functional, performance, usability, and extensive security testing.
+    *   Security testing used **Wireshark** for packet sniffing and techniques like parameter tampering and privilege escalation checks.
+*   **Key Findings**:
+    *   The system was functionally sound and performed well.
+    *   **Multiple serious security vulnerabilities** were discovered, including a lack of data encryption in transit and at rest, and weak authentication.
+    *   A **significant memory leak** was also identified in the front end.
+*   **Q&A Highlights**: Team members detailed their performance testing setup, with one using custom scripts for the database and another using Windows Performance Monitor and a heap analysis tool for the front-end.
+
+### Group 7: 2nd Group (Smart Medical System)
+*   **Project**: A Smart Medical Management System.
+*   **Testing Methodology**:
+    *   Used a mix of manual and automated testing, with `cppcheck` for static analysis and a Qt test framework for performance metrics.
+    *   Unit tests were conducted using mock database objects.
+*   **Key Findings**:
+    *   A critical business logic failure was found due to "state pollution" in a singleton object, where user state was not cleared when switching between different user roles.
+    *   The project was missing a user manual, which the testing team created.
+*   **Q&A Highlights**: The group acknowledged that their process could be improved by adding concurrency and security testing (e.g., for SQL injection). They prioritized the "state pollution" bug as high because it directly impacted user functionality.
+
+### Group 8: 4th Group
+*   **Project**: A system based on a C++ framework.
+*   The transcript ends abruptly during the introduction of this group's presentation.
